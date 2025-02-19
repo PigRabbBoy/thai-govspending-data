@@ -14,4 +14,4 @@ export type RequestCGDContractType = {
     winner_tid?: string;
     budget_start?: number;
     budget_end?: number;
-} & RequestListDefaultType & RequestDefau
+} & RequestListDefaultType & RequestDefaultType;
