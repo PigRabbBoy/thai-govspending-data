@@ -3,8 +3,8 @@ type RequestDefaultType = {
 };
 
 type RequestListDefaultType = {
-  offset: number;
-  limit: number;
+  offset?: number;
+  limit?: number;
 };
 
 export type RequestCGDContractType = {
@@ -27,7 +27,7 @@ export type RequestSummaryCGDContractType = {
 } & RequestDefaultType;
 
 export type RequestEGPDepartmentType = {
-  dept_name: string;
+  dept_name?: string;
 } & RequestListDefaultType &
   RequestDefaultType;
 

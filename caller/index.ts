@@ -44,6 +44,7 @@ export class Caller {
     const queryString = qs.stringify(data);
     const response = await fetch(`${url}?${queryString}`);
     const json = await response.json();
+    console.log(json)
     return json as T;
   }
 
@@ -58,7 +59,7 @@ export class Caller {
     );
   }
 
-  async callEGPDepartment(params: RequestEGPDepartmentType) {
+  async callEGPDepartment(params: Omit<RequestEGPDepartmentType,'api-key'>) {
     return this.get<ResponseEGPDepartmentType>("/egpdepartment", params);
   }
 
